@@ -1,79 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Cafe Street</title>
-    <link rel="shortcut icon" href="./assets/images/logo_coffe.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Street - Enjoy Your Coffee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css">
 
+</head>
 <body>
 
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./assets/images/logo_coffe.svg" alt="logo-coffee">
+    </div>
 
-    <header>
-        <div class="container">
-            <img class="image-beans" src="./assets/images/bg_img_hero-coffe-beans.svg" alt="coffee">
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="./assets/images/logo_coffe.svg" alt="logo coffee">
-                </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="active">About us</a></li>
+      <li><a href="#menu">Our Product</a></li>
+      <li><a href="#delivery">Delivery</a></li>
+    </ul>
 
-                <ul class="nav-links">
-                    <li class="li-color">About us</li>
-                    <li>Our Product</li>
-                    <li>Delivery</li>
-                </ul>
+    <div class="nav-right">
+      <div class="search-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" placeholder="Cappuccino" />
+      </div>
+      <div class="cart-btn">
+        <img src="./assets/images/icons_cart.svg" alt="">
+      </div>
+    </div>
+  </nav>
 
-                <div class="nav-right">
-                    <div class="search-box">
-                        <input type="text" placeholder="Cappuccino">
-                        <img src="./assets/images/Search-Vector.jpg" class="search-icon">
-                    </div>
-                    <img src="./assets/images/icons_cart.svg" class="cart-icon">
-                </div>
-            </nav>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <span class="beans-coffee-bg"><img src="./assets/images/bg_img_hero-coffe-beans.svg" alt=""></span>
+
+    <div class="hero-left">
+      <h1 class="hero-title">
+        Enjoy your <span class="highlight">coffee</span><br/>
+        before your activity
+      </h1>
+      <p class="hero-subtitle">
+        Boost your productivity and build your<br/>
+        mood with a glass of coffee in the morning
+      </p>
+      <div class="hero-actions">
+        <button class="btn-order">
+          Order now
+          <span class="btn-icon">
+            <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+          </span>
+        </button>
+        <a href="#menu" class="btn-more">More menu</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-img-wrapper">
+        <img src="./assets/images/img-hero.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR NOW SECTION ===== -->
+  <section class="popular-section" id="menu">
+    <h2 class="section-title">Popular <span class="underline-word">Now</span></h2>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/vanilla-latte.svg" alt="Vanilla Latte" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
         </div>
-    </header>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Vanilla Latte</span>
+            <span class="card-price">21 K</span>
+          </div>
+          <div class="card-bottom">
+            <div class="card-tags">
+              <span class="tag">Hot</span>
+              <span class="tag">Cold</span>
+            </div>
+            <button class="btn-cart" aria-label="Add Vanilla Latte to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/expresso.svg" alt="Espresso" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Espresso</span>
+            <span class="card-price">12 K</span>
+          </div>
+          <div class="card-bottom">
+            <div class="card-tags">
+              <span class="tag">Hot</span>
+              <span class="tag">Cold</span>
+            </div>
+            <button class="btn-cart" aria-label="Add Espresso to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/hazelnut-latte.svg" alt="Hazelnut Latte" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Hazelnut Latte</span>
+            <span class="card-price">23 K</span>
+          </div>
+          <div class="card-bottom">
+            <div class="card-tags">
+              <span class="tag">Hot</span>
+              <span class="tag">Cold</span>
+            </div>
+            <button class="btn-cart" aria-label="Add Hazelnut Latte to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <!-- ===== HOW TO USE DELIVERY ===== -->
+  <section class="delivery-section" id="delivery">
+    <h2 class="section-title">How to use delivery <span class="underline-word">service</span></h2>
+    <div class="delivery-steps">
+
+      <div class="delivery-step">
+        <div class="step-icon">
+        <img src="./assets/images/coffee-cup-plate-image.svg" alt="">  
+        </div>
+        <h3 class="step-title">choose your coffee</h3>
+        <p class="step-desc">there are 20+ coffees for you</p>
+      </div>
+
+      <div class="delivery-step">
+        <div class="step-icon">
+          <img src="./assets/images/food-truck 1.svg" alt=""></svg>
+        </div>
+        <h3 class="step-title">we delivery it to you</h3>
+        <p class="step-desc">Choose delivery service</p>
+      </div>
+
+      <div class="delivery-step">
+        <div class="step-icon">
+          <img src="./assets/images/coffee-cup 2.svg" alt="">
+        </div>
+        <h3 class="step-title">Enjoy your coffee</h3>
+        <p class="step-desc">Choose delivery service</p>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="about-section" id="about">
+    <!-- Cup  -->
+    <div class="watermark">
+        <img src="./assets/images/bg-image-with-coffee-vector.svg" alt="">
+    </div>
+    <div class="about-inner">
+      <div class="about-img-wrapper">
+        <img src="./assets/images/coffee-cup-with-coffee.svg" alt="A cup of quality coffee" />
+      </div>
+      <div class="about-content">
+        <h2 class="section-title">About <span class="underline-word">us</span></h2>
+        <p class="about-tagline">We provide quality coffee,<br/>and ready to deliver.</p>
+        <p class="about-desc">
+          We are a company that makes and distributes delicious drinks.
+          our main product is made with a secret recipe and available in stores worldwide.
+        </p>
+        <button class="btn-dark">Get your coffee</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPECIAL MENU SECTION ===== -->
+  <section class="special-menu-section">
+    <h2 class="section-title">Special menu <span class="underline-word">for you</span></h2>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/sandwich.svg" alt="Sandwich" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Sandwich</span>
+            <span class="card-price">12 K</span>
+          </div>
+          <div class="card-bottom">
+            <p class="card-desc">bread with meat and vegetables</p>
+            <button class="btn-cart" aria-label="Add Sandwich to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/hot-milk.svg" alt="Hot Milk" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Hot Milk</span>
+            <span class="card-price">12 K</span>
+          </div>
+          <div class="card-bottom">
+            <p class="card-desc">Hot Milk with less sugar</p>
+            <button class="btn-cart" aria-label="Add Hot Milk to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/coffee-ice-cream.svg" alt="Coffe Ice Cream" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Coffe Ice Cream</span>
+            <span class="card-price">12 K</span>
+          </div>
+          <div class="card-bottom">
+            <p class="card-desc">Coffe with ice cream vanilla</p>
+            <button class="btn-cart" aria-label="Add Coffee Ice Cream to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/cappucino.svg" alt="Cappucino" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Cappucino</span>
+            <span class="card-price">12 K</span>
+          </div>
+          <div class="card-bottom">
+            <p class="card-desc">Hot Cappucino</p>
+            <button class="btn-cart" aria-label="Add Cappucino to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/moccaccinno.svg" alt="Moccacinno" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Moccacinno</span>
+            <span class="card-price">12 K</span>
+          </div>
+          <div class="card-bottom">
+            <p class="card-desc">Hot Moccacino</p>
+            <button class="btn-cart" aria-label="Add Moccacinno to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-img-wrapper">
+          <img src="./assets/images/waffle-ice-cream.svg" alt="Waffle Ice Cream" />
+          <div class="card-rating-badge">4.8 <span class="star">&#9733;</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <span class="card-name">Waffle Ice Crem</span>
+            <span class="card-price">12 K</span>
+          </div>
+          <div class="card-bottom">
+            <p class="card-desc">Waffle with Ice cream</p>
+            <button class="btn-cart" aria-label="Add Waffle Ice Cream to cart">
+              <img src="./assets/images/cart-orange-bg.svg" alt="cart" width="43px" height="43px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials-section">
+    <div class="cup-watermark" style="bottom:20px; left:30px;">
+    <img src="./assets/images/bg-image-with-coffee-vector-50%.svg" alt="">  
+    </div>
     
-    <main>
-        <div class="container">
-            <div class="section-div1">
 
-                <div class="sec-1-div1">
-                    <h1>Enjoy Your <span>coffee</span> before your activity</h1>
-                    <p >
-                        Boost your productivity and build your mood with a glass of coffee in the morning
-                    </p>
-                    <div class="div-btn-link">
-                        <button>
-                            Order now
-                        </button>
-                        <img src="./assets/images/cart-orange-bg.svg" alt="cart">
-                        <a href="#">More menu</a>
-                    </div>
-                </div>
-                <div class="sec-1-div2">
-                    <img src="./assets/images/img-hero.svg" alt="" width="526px" height="416px">
-                </div>
+    <div class="testimonials-inner">
+      <div class="testimonials-left">
+        <h2 class="section-title">What they say about us</h2>
+        <p>We always provide the best service and always maintain the quality of coffee</p>
+      </div>
+      <div class="testimonials-right">
+        <div class="testimonials-cards-row">
+          <div class="testimonial-card">
+            <img src="./assets/images/naura.svg" alt="Naura" />
+            <div class="testimonial-info">
+              <div class="testimonial-name">Naura</div>
+              <div class="testimonial-quote">I really love the cappucino, the coffee was very smooth</div>
             </div>
-        </div>
-    </main>
-
-    <!-- <footer>
-        <div class="container">
-            <div class="footer-section">
-                <section class="subscribe">
-                    <div class="subscribe-heading">
-                        <h2>Subscribe to get 50% discount</h2>
-
-                    </div><input type="email" placeholder="Email address">
-                    <button>Order Now</button>
-                </section>
+          </div>
+          <div class="testimonial-card">
+            <img src="./assets/images/john.svg" alt="John" />
+            <div class="testimonial-info">
+              <div class="testimonial-name">John</div>
+              <div class="testimonial-quote">this coffee shop is very convenient</div>
             </div>
+          </div>
+          <div class="testimonial-card">
+            <img src="./assets/images/azura.svg" alt="Azura" />
+            <div class="testimonial-info">
+              <div class="testimonial-name">Azura</div>
+              <div class="testimonial-quote">the coffee menu here is very much</div>
+            </div>
+          </div>
         </div>
-    </footer> -->
+        <div class="testimonial-dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+  <section class="subscribe-section">
+    <div class="subscribe-inner">
+      <img src="./assets/images/coffee-machine.svg" alt="" aria-hidden="true" class="subscribe-bg-img" />
+      <div class="subscribe-content">
+        <h2 class="subscribe-title">Subscribe to get 50% discount price</h2>
+        <div class="subscribe-form">
+          <input type="email" class="subscribe-input" placeholder="Email address" />
+          <button class="btn-subscribe">Order now</button>
+        </div>
+      </div>
+    </div>
+  </section>  
+</footer>
 
 </body>
-
 </html>
