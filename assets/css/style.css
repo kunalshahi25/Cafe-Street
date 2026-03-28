@@ -1,4 +1,4 @@
-    *{
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -6,21 +6,22 @@
 
     :root {
         --bg-cream: #f5e6d3;
-        --bg-beige: #f0dcc0;
+        --bg-beige: #F6EBDA;
         --color-orange: #f5a623;
         --color-brown: #2c1a0e;
         --color-brown-dark: #1a0f06;
         --color-white: #ffffff;
-        --color-white-base: 255, 255, 255,0.7;
+        --color-white-base: 255, 255, 255, 0.7;
         --color-gray: #888888;
         --color-gray-light: #f8f8f8;
         --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
         --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.14);
         --radius-card: 16px;
         --radius-btn: 50px;
+        --font-family: Poppins;
     }
 
-    
+
 
     body {
         font-family: 'Poppins', sans-serif;
@@ -39,45 +40,46 @@
         display: block;
         max-width: 100%;
     }
-    .beans-coffee-bg{
-        position: relative;
-        z-index: 10;
-        top: -10;
-        right: -10;
+
+    .beans-coffee-bg {
+        position: absolute;
+        z-index: 1;
+        top: -34px;
+        left: 922px;
     }
+
+    .beans-coffee-bg2 {
+        position: absolute;
+        z-index: 1;
+        
+        top: 454px;
+        left: 7px;
+        opacity: 1;
+
+    }
+
     /* ===== NAVBAR ===== */
     .navbar {
 
-        position: sticky;
+        position: relative;
         top: 0;
-        z-index: 9;
-        background-color: var(--color-white-base);
+        z-index: 11;
+        background-color: var(--bg-beige);
         padding: 18px 60px;
         display: flex;
+
+        width: 100%;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid rgba(245, 166, 35, 0.15);
     }
 
+
     .logo {
         display: flex;
         align-items: center;
+        margin-right: 269px;
         gap: 8px;
-    }
-
-    .logo-icon {
-        width: 36px;
-        height: 36px;
-    }
-
-    .logo-text {
-        font-size: 18px;
-        font-weight: 700;
-        color: var(--color-brown-dark);
-    }
-
-    .logo-text span {
-        color: var(--color-orange);
     }
 
     .nav-links {
@@ -85,6 +87,7 @@
         align-items: center;
         gap: 36px;
         list-style: none;
+        margin-right: 269px;
     }
 
     .nav-links a {
@@ -156,25 +159,21 @@
         position: absolute;
         top: -4px;
         right: -4px;
-        background: var(--color-orange);
-        color: white;
         font-size: 10px;
         font-weight: 700;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     /* ===== HERO SECTION ===== */
     .hero {
+        background-color: var(--bg-beige);
         padding: 60px 60px 80px;
         display: flex;
-        align-items: center;
+        z-index: 11;
+        height: 770px;
+        /* align-items: center; */
         justify-content: space-between;
-        gap: 40px;
+        gap: 267px;
         position: relative;
         overflow: hidden;
         min-height: 500px;
@@ -185,12 +184,14 @@
         max-width: 460px;
         position: relative;
         z-index: 2;
+        top: 60px;
     }
 
     .hero-title {
-        font-size: 48px;
-        font-weight: 800;
+        font-size: 44px;
+        font-weight: 600;
         line-height: 1.2;
+        font-family: var(--font-family);
         color: var(--color-brown-dark);
         margin-bottom: 20px;
     }
@@ -214,19 +215,27 @@
     }
 
     .btn-order {
+        width: 170px;
+        height: 46px;
         display: flex;
         align-items: center;
         gap: 10px;
         background: var(--color-brown-dark);
         color: var(--color-white);
-        padding: 14px 28px;
+        opacity: 1;
+        border-radius: 33px;
+        padding-top: 12px;
+        padding-right: 32px;
+        padding-bottom: 12px;
+        padding-left: 32px;
         border-radius: var(--radius-btn);
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         font-family: 'Poppins', sans-serif;
         cursor: pointer;
         border: none;
         transition: background 0.2s, transform 0.2s;
+        white-space: nowrap;
     }
 
     .btn-order:hover {
@@ -235,13 +244,14 @@
     }
 
     .btn-order .btn-icon {
-        width: 28px;
-        height: 28px;
-        background: var(--color-orange);
-        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .btn-icon {
+        position: relative;
+        left: 25px;
     }
 
     .btn-more {
@@ -256,112 +266,12 @@
         opacity: 0.75;
     }
 
-    /* Coffee beans decorations */
-    .bean {
-        position: absolute;
-        border-radius: 50%;
-        background: var(--color-brown-dark);
-        opacity: 0.85;
-    }
-
-    .bean::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 55%;
-        height: 22%;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .bean-1 {
-        width: 28px;
-        height: 18px;
-        top: 60px;
-        left: 110px;
-        transform: rotate(-30deg);
-    }
-
-    .bean-2 {
-        width: 22px;
-        height: 14px;
-        top: 160px;
-        left: 30px;
-        transform: rotate(20deg);
-    }
-
-    .bean-3 {
-        width: 30px;
-        height: 19px;
-        top: 380px;
-        left: 60px;
-        transform: rotate(-50deg);
-    }
-
-    .bean-4 {
-        width: 24px;
-        height: 15px;
-        top: 440px;
-        left: 200px;
-        transform: rotate(10deg);
-    }
-
-    .bean-5 {
-        width: 20px;
-        height: 13px;
-        top: 300px;
-        left: 400px;
-        transform: rotate(-20deg);
-    }
-
-    .bean-6 {
-        width: 26px;
-        height: 16px;
-        top: 90px;
-        left: 500px;
-        transform: rotate(40deg);
-    }
-
-    .bean-7 {
-        width: 32px;
-        height: 20px;
-        top: 20px;
-        right: 220px;
-        transform: rotate(-15deg);
-    }
-
-    .bean-8 {
-        width: 24px;
-        height: 15px;
-        top: 80px;
-        right: 80px;
-        transform: rotate(55deg);
-    }
-
-    .bean-9 {
-        width: 28px;
-        height: 18px;
-        top: 200px;
-        right: 30px;
-        transform: rotate(-40deg);
-    }
-
-    .bean-10 {
-        width: 22px;
-        height: 14px;
-        top: 400px;
-        right: 100px;
-        transform: rotate(25deg);
-    }
-
-    /* Hero right — circular coffee image */
+    /*circular coffee image */
     .hero-right {
         flex: 1;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
         position: relative;
         z-index: 2;
     }
@@ -372,16 +282,6 @@
         height: 380px;
     }
 
-    .hero-circle {
-        width: 380px;
-        height: 380px;
-        border-radius: 50%;
-        background: var(--color-brown-dark);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
     .hero-circle img {
         width: 100%;
@@ -389,56 +289,14 @@
         object-fit: cover;
     }
 
-    .badge-name {
-        position: absolute;
-        top: 50%;
-        left: -80px;
-        transform: translateY(-50%);
-        background: var(--color-white);
-        border-radius: 50px;
-        padding: 12px 22px;
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--color-brown-dark);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-        white-space: nowrap;
-    }
-
-    .badge-rating {
-        position: absolute;
-        top: 20px;
-        right: -30px;
-        background: var(--color-white);
-        border-radius: 50px;
-        padding: 10px 18px;
-        font-size: 15px;
-        font-weight: 700;
-        color: var(--color-brown-dark);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .badge-rating .star {
-        color: var(--color-orange);
-        font-size: 16px;
-    }
-
-    .badge-price {
-        position: absolute;
-        bottom: 30px;
-        left: -20px;
-        background: var(--color-white);
-        border-radius: 50px;
-        padding: 12px 22px;
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--color-brown-dark);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-    }
 
     /* ===== SECTION HEADINGS ===== */
+    /* .popular-section{
+        position: absolute;
+        z-index: 11;
+        top: 659px;
+        width: 100;%
+    } */
     .section-title {
         font-size: 28px;
         font-weight: 800;
@@ -463,6 +321,8 @@
     }
 
     /* ===== PRODUCT CARDS ===== */
+
+
     .products-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -593,12 +453,28 @@
     /* ===== POPULAR NOW SECTION ===== */
     .popular-section {
         padding: 0 60px 70px;
-        background: var(--bg-cream);
     }
 
     /* ===== ABOUT US SECTION ===== */
+    /* cup watermarks */
+    .watermark {
+        background-size: cover;
+        position: relative;
+        width: 1441px;
+        height: 484px;
+        top: 90px;
+        z-index: 0;
+        opacity: 0.5;
+    }
+
+    .about-img-wrapper {
+        position: absolute;
+        z-index: 11;
+        left: 242px;
+        top: -500px;
+    }
+
     .about-section {
-        /* background: var(--bg-beige); */
         padding: 70px 60px;
         position: relative;
         overflow: hidden;
@@ -614,20 +490,34 @@
 
     .about-img-wrapper {
         flex-shrink: 0;
-        width: 300px;
+        border-radius: 12px;
+
     }
 
     .about-img-wrapper img {
-        width: 100%;
-        height: 360px;
+        width: 370px;
+        height: 509px;
         object-fit: cover;
         border-radius: 16px;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
 
     .about-content {
+        position: absolute;
         max-width: 460px;
+        z-index: 11;
+        left: 776.58px;
+        top: -299px;
+        width: 478px;
+        height: 316px;
     }
+
+    /* 
+
+left: ;
+angle: 0 deg;
+opacity: 1;
+ */
 
     .about-content .section-title {
         margin-bottom: 16px;
@@ -665,23 +555,6 @@
     .btn-dark:hover {
         background: var(--color-brown);
         transform: translateY(-2px);
-    }
-    .watermark{
-
-    }
-    .about-img-wrapper{
-        position: relative;
-        left: 242px;
-    }
-
-    /* cup watermarks */
-    .cup-watermark {
-        position: absolute;
-        opacity: 0.12;
-    }
-
-    .cup-watermark svg {
-        fill: var(--color-orange);
     }
 
     /* ===== SPECIAL MENU SECTION ===== */
@@ -745,8 +618,13 @@
     }
 
     /* ===== TESTIMONIALS SECTION ===== */
+
+    .cup-watermark {
+        z-index: 0;
+        opacity: 1;
+    }
+
     .testimonials-section {
-        background: var(--bg-beige);
         padding: 70px 60px;
         position: relative;
         overflow: hidden;
